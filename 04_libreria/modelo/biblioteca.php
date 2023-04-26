@@ -57,22 +57,21 @@ class Biblioteca {
             echo "Ocurrió un error: " . $ex->getMessage();
             return false;
         }
-    }
+    } 
 
-    function obtenerBiblioteca($id) {
+    function obtenerBiblioteca() {
         try {
             $querySelect = "SELECT * FROM bibliotecas WHERE id=:id";
             $instanciaDB = $this->db->prepare($querySelect);
 
-            $instanciaDB->bindParam(":id", $id);
+            $instanciaDB->bindParam(":id", $this->id);
 
             $instanciaDB->execute();
 
             if ($instanciaDB) {
-                return $instanciaDB->fetchObject("biblioteca");
+                return $instanciaDB->fetchAll(PDO::FETCH_CLASS, "biblioteca")[0];
             } else {
                 echo "Ocurrió un error inesperado al obtener la biblioteca";
-                return null;
             }
         } catch (Exception $ex) {
             echo "Ocurrió un error: " . $ex->getMessage();

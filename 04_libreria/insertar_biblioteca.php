@@ -19,7 +19,6 @@ require "modelo/biblioteca.php";
                 && isset($_POST['descripcion']) 
                 && isset($_POST['estado'])
             ) {
-                
                 $nombre = $_POST['nombre'];
                 $descripcion = $_POST['descripcion'];
                 $estado = $_POST['estado'];
@@ -48,8 +47,8 @@ require "modelo/biblioteca.php";
                     <label>Estado</label>
                     <select class="custom-select" name="estado" required>
                         <option>Elegir Estado...</option>
-                        <option value="1">Activo</option>
-                        <option value="0">Inactivo</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
                     </select>
                 </div>
 

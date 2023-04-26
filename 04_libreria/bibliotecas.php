@@ -36,7 +36,7 @@
                                         <th>0</th>
                                         <th>" . $biblioteca->getEstado() . "</th>";
 
-                                        if ($biblioteca->getEstado() == "1") {
+                                        if ($biblioteca->getEstado() == "Activo") {
                                            echo "<th>
                                                     <a href=añadir_libros.php?id=" . $biblioteca->getId() . "><button>Añadir Libros</button></a>
                                                     <a href=ver_libros.php?id=" . $biblioteca->getId() . "><button>Ver Libros</button></a>
@@ -44,12 +44,17 @@
                                                     <a href=borrar_biblioteca.php?id=" . $biblioteca->getId() . "><button>Borrar Biblioteca</button></a>
                                                     <a href=comprar_biblioteca.php?id=" . $biblioteca->getId() . "><button>Comprar Biblioteca</button></a>
                                                 </th>";
-                                        } else {
+                                        } else if ($biblioteca->getEstado() == "Inactivo") {
                                            echo "<th>
                                                     <a href=ver_libros.php?id=" . $biblioteca->getId() . "><button>Ver Libros</button></a>
                                                     <a href=editar_biblioteca.php?id=" . $biblioteca->getId() . "><button>Editar Biblioteca</button></a>
                                                     <a href=borrar_biblioteca.php?id=" . $biblioteca->getId() . "><button>Borrar Biblioteca</button></a>
-                                               </th>";
+                                                </th>";
+                                        } else if ($biblioteca->getEstado() == "Comprado") {
+                                            echo "<th>
+                                                    <p>Ya has adquirido esta Biblioteca</p>
+                                                    <a href=ver_librosComprados.php?id=" . $biblioteca->getId() . "><button>Editar Biblioteca</button></a>
+                                                </th>";
                                         }
                                         
                                 echo "</tr>";
