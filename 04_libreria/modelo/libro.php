@@ -65,7 +65,7 @@ class Libro
 
             if ($respuestaInsertar) {
                 echo "Libro creado correctamente";
-                header("Location:index.php");
+                header("Location:../../index.php");
             } else {
                 echo "Ocurrió un error inesperado al crear el Libro";
             }
@@ -87,7 +87,7 @@ class Libro
 
             if ($respuestaBorrar) {
                 echo "Libro eliminado correctamente";
-                header("Location:index.php");
+                header("Location:../../index.php");
             } else {
                 echo "Ocurrió un error inesperado al eliminar el Libro";
             }
@@ -143,7 +143,7 @@ class Libro
 
             if ($instanciaDB) {
                 echo "Se actualizó correctamente el libro seleccionado";
-                header("Location:index.php");
+                header("Location:../../index.php");
             } else {
                 echo "Ocurrió un error inesperado al recuperar el Libro seleccionado";
             }

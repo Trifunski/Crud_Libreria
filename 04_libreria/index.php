@@ -41,8 +41,8 @@
                     <th><img src=" . $libro->getImagen() . " width='70' height='100'></th>
 
                     <th>
-                        <a href=editar.php?isbn=" . $libro->getIsbn() . "><button>Editar</button></a>
-                        <a href=borrar.php?isbn=" . $libro->getIsbn() . "><button>Borrar</button></a>
+                        <a href=vista/libros/editar.php?isbn=" . $libro->getIsbn() . "><button>Editar</button></a>
+                        <a href=vista/libros/borrar.php?isbn=" . $libro->getIsbn() . "><button>Borrar</button></a>
                     </th>
                 </tr>";
                         }
@@ -51,8 +51,8 @@
                 </table>
 
                 <br>
-                <a href="insertar.php"><button class="btn btn-primary">Nuevo Libro</button></a>
-                <a href="bibliotecas.php"><button class="btn btn-primary">Bibliotecas</button></a>
+                <a href="vista/libros/insertar.php"><button class="btn btn-primary">Nuevo Libro</button></a>
+                <a href="vista/biblioteca/bibliotecas.php"><button class="btn btn-primary">Bibliotecas</button></a>
             </div>
         </div>
     </body>

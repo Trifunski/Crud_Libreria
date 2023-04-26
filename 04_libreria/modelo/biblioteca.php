@@ -120,7 +120,7 @@ class Biblioteca {
             }
         } catch (Exception $ex) {
             echo "Ocurrió un error: " . $ex->getMessage();
-            return false;
+            return false; 
         }
     }
 
